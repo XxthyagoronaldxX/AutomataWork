@@ -28,7 +28,8 @@ public class UserServiceImpl implements IUserService {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
         TemporalAccessor temporalAccessor = formatter.parse(userDTO.getDate());
         LocalDateTime localDateTime = LocalDateTime.from(temporalAccessor);
-        Timestamp timestamp = Timestamp.valueOf(localDateTime);
+        Timestamp timestamp = Timestamp.valueOf(localDateTime.minusHours(3));
+
         double randomValue = Double.parseDouble(userDTO.getRandomValue());
 
         BeanUtils.copyProperties(userDTO, userEntity, "date", "randomValue");
