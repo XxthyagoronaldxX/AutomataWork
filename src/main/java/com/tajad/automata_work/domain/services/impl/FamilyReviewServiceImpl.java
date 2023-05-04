@@ -56,7 +56,7 @@ public class FamilyReviewServiceImpl implements IFamilyReviewService {
             case LETTER_D:
                 return "(HH|MM)(hm|mh)(h|m){2,}(hm|mh)";
             case LETTER_E:
-                return "(HH|MM)((hm|mh)*[hm]?)?";
+                return "(HH|MM)((hm)+[h]?|(mh)+[m]?|h|m)";
             case LETTER_F:
                 return "(HH|MM)((h?m+|m+h?)*h?)?";
             case LETTER_G:

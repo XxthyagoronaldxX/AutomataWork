@@ -14,7 +14,7 @@ public class UserDTO {
     @Pattern(regexp = "[A-Z][a-z]+( [A-Z][a-z]+)? [A-Z][a-z]+", message = "Name pattern is wrong.")
     public String name;
 
-    @Pattern(regexp = "\\w+@\\w+[.]+[\\w|.]{2,}", message = "Email pattern is wrong.")
+    @Pattern(regexp = "[a-z]+@[a-z]+([.]com)?[.]br", message = "Email pattern is wrong.")
     private String email;
 
     @Pattern(regexp = "(?=\\w*[A-Za-z])(?=\\w*\\d)[A-Za-z0-9]{8}", message = "Password pattern is wrong.")
